@@ -1,0 +1,15 @@
+C:\Faculdade\plf-es-2023-1-ti5-5104100-outdoor\codigo\Back-End\OutDoor-Backend\OutDoor-Services\bin\Debug\net6.0\OutDoor-Services.deps.json
+C:\Faculdade\plf-es-2023-1-ti5-5104100-outdoor\codigo\Back-End\OutDoor-Backend\OutDoor-Services\bin\Debug\net6.0\OutDoor-Services.dll
+C:\Faculdade\plf-es-2023-1-ti5-5104100-outdoor\codigo\Back-End\OutDoor-Backend\OutDoor-Services\bin\Debug\net6.0\OutDoor-Services.pdb
+C:\Faculdade\plf-es-2023-1-ti5-5104100-outdoor\codigo\Back-End\OutDoor-Backend\OutDoor-Services\bin\Debug\net6.0\OutDoor-Models.dll
+C:\Faculdade\plf-es-2023-1-ti5-5104100-outdoor\codigo\Back-End\OutDoor-Backend\OutDoor-Services\bin\Debug\net6.0\OutDoor-Models.pdb
+C:\Faculdade\plf-es-2023-1-ti5-5104100-outdoor\codigo\Back-End\OutDoor-Backend\OutDoor-Services\obj\Debug\net6.0\OutDoor-Services.csproj.AssemblyReference.cache
+C:\Faculdade\plf-es-2023-1-ti5-5104100-outdoor\codigo\Back-End\OutDoor-Backend\OutDoor-Services\obj\Debug\net6.0\OutDoor-Services.GeneratedMSBuildEditorConfig.editorconfig
+C:\Faculdade\plf-es-2023-1-ti5-5104100-outdoor\codigo\Back-End\OutDoor-Backend\OutDoor-Services\obj\Debug\net6.0\OutDoor-Services.AssemblyInfoInputs.cache
+C:\Faculdade\plf-es-2023-1-ti5-5104100-outdoor\codigo\Back-End\OutDoor-Backend\OutDoor-Services\obj\Debug\net6.0\OutDoor-Services.AssemblyInfo.cs
+C:\Faculdade\plf-es-2023-1-ti5-5104100-outdoor\codigo\Back-End\OutDoor-Backend\OutDoor-Services\obj\Debug\net6.0\OutDoor-Services.csproj.CoreCompileInputs.cache
+C:\Faculdade\plf-es-2023-1-ti5-5104100-outdoor\codigo\Back-End\OutDoor-Backend\OutDoor-Services\obj\Debug\net6.0\OutDoor-Services.csproj.CopyComplete
+C:\Faculdade\plf-es-2023-1-ti5-5104100-outdoor\codigo\Back-End\OutDoor-Backend\OutDoor-Services\obj\Debug\net6.0\OutDoor-Services.dll
+C:\Faculdade\plf-es-2023-1-ti5-5104100-outdoor\codigo\Back-End\OutDoor-Backend\OutDoor-Services\obj\Debug\net6.0\refint\OutDoor-Services.dll
+C:\Faculdade\plf-es-2023-1-ti5-5104100-outdoor\codigo\Back-End\OutDoor-Backend\OutDoor-Services\obj\Debug\net6.0\OutDoor-Services.pdb
+C:\Faculdade\plf-es-2023-1-ti5-5104100-outdoor\codigo\Back-End\OutDoor-Backend\OutDoor-Services\obj\Debug\net6.0\ref\OutDoor-Services.dll
