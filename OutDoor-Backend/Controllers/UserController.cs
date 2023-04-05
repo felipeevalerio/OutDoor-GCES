@@ -25,14 +25,14 @@ namespace OutDoor_Backend.Controllers
 
             return CreatedAtAction(nameof(Create), result);
         }
-
+            
         [HttpPost]
         [Route("/api/users/login")]
         public async Task<ActionResult> Login([FromBody] LoginRequest request)
         {
             var result = await UserService.LoginUser(request);
 
-            return Ok(request);
+            return Ok(result);
         }
     }
 }

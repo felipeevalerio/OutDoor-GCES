@@ -13,3 +13,18 @@ C:\Faculdade\plf-es-2023-1-ti5-5104100-outdoor\codigo\Back-End\OutDoor-Backend\O
 C:\Faculdade\plf-es-2023-1-ti5-5104100-outdoor\codigo\Back-End\OutDoor-Backend\OutDoor-Repository\obj\Debug\net6.0\refint\OutDoor-Repository.dll
 C:\Faculdade\plf-es-2023-1-ti5-5104100-outdoor\codigo\Back-End\OutDoor-Backend\OutDoor-Repository\obj\Debug\net6.0\OutDoor-Repository.pdb
 C:\Faculdade\plf-es-2023-1-ti5-5104100-outdoor\codigo\Back-End\OutDoor-Backend\OutDoor-Repository\obj\Debug\net6.0\ref\OutDoor-Repository.dll
+C:\Users\DTI Digital\Desktop\OutDoorBackend\OutDoor-Repository\bin\Debug\net6.0\OutDoor-Repository.deps.json
+C:\Users\DTI Digital\Desktop\OutDoorBackend\OutDoor-Repository\bin\Debug\net6.0\OutDoor-Repository.dll
+C:\Users\DTI Digital\Desktop\OutDoorBackend\OutDoor-Repository\bin\Debug\net6.0\OutDoor-Repository.pdb
+C:\Users\DTI Digital\Desktop\OutDoorBackend\OutDoor-Repository\bin\Debug\net6.0\OutDoor-Models.dll
+C:\Users\DTI Digital\Desktop\OutDoorBackend\OutDoor-Repository\bin\Debug\net6.0\OutDoor-Models.pdb
+C:\Users\DTI Digital\Desktop\OutDoorBackend\OutDoor-Repository\obj\Debug\net6.0\OutDoor-Repository.csproj.AssemblyReference.cache
+C:\Users\DTI Digital\Desktop\OutDoorBackend\OutDoor-Repository\obj\Debug\net6.0\OutDoor-Repository.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\DTI Digital\Desktop\OutDoorBackend\OutDoor-Repository\obj\Debug\net6.0\OutDoor-Repository.AssemblyInfoInputs.cache
+C:\Users\DTI Digital\Desktop\OutDoorBackend\OutDoor-Repository\obj\Debug\net6.0\OutDoor-Repository.AssemblyInfo.cs
+C:\Users\DTI Digital\Desktop\OutDoorBackend\OutDoor-Repository\obj\Debug\net6.0\OutDoor-Repository.csproj.CoreCompileInputs.cache
+C:\Users\DTI Digital\Desktop\OutDoorBackend\OutDoor-Repository\obj\Debug\net6.0\OutDoor-Repository.csproj.CopyComplete
+C:\Users\DTI Digital\Desktop\OutDoorBackend\OutDoor-Repository\obj\Debug\net6.0\OutDoor-Repository.dll
+C:\Users\DTI Digital\Desktop\OutDoorBackend\OutDoor-Repository\obj\Debug\net6.0\refint\OutDoor-Repository.dll
+C:\Users\DTI Digital\Desktop\OutDoorBackend\OutDoor-Repository\obj\Debug\net6.0\OutDoor-Repository.pdb
+C:\Users\DTI Digital\Desktop\OutDoorBackend\OutDoor-Repository\obj\Debug\net6.0\ref\OutDoor-Repository.dll
