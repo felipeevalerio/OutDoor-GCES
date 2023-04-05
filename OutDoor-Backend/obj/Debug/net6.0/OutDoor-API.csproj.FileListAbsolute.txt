@@ -97,3 +97,13 @@ C:\Users\DTI Digital\Desktop\OutDoorBackend\OutDoor-Backend\obj\Debug\net6.0\ref
 C:\Users\DTI Digital\Desktop\OutDoorBackend\OutDoor-Backend\obj\Debug\net6.0\OutDoor-API.pdb
 C:\Users\DTI Digital\Desktop\OutDoorBackend\OutDoor-Backend\obj\Debug\net6.0\OutDoor-API.genruntimeconfig.cache
 C:\Users\DTI Digital\Desktop\OutDoorBackend\OutDoor-Backend\obj\Debug\net6.0\ref\OutDoor-API.dll
+C:\Faculdade\OutDoorBackend\OutDoor-Backend\obj\Debug\net6.0\OutDoor-API.csproj.AssemblyReference.cache
+C:\Faculdade\OutDoorBackend\OutDoor-Backend\obj\Debug\net6.0\OutDoor-API.GeneratedMSBuildEditorConfig.editorconfig
+C:\Faculdade\OutDoorBackend\OutDoor-Backend\obj\Debug\net6.0\OutDoor-API.AssemblyInfoInputs.cache
+C:\Faculdade\OutDoorBackend\OutDoor-Backend\obj\Debug\net6.0\OutDoor-API.AssemblyInfo.cs
+C:\Faculdade\OutDoorBackend\OutDoor-Backend\obj\Debug\net6.0\OutDoor-API.csproj.CoreCompileInputs.cache
+C:\Faculdade\OutDoorBackend\OutDoor-Backend\obj\Debug\net6.0\OutDoor-API.MvcApplicationPartsAssemblyInfo.cs
+C:\Faculdade\OutDoorBackend\OutDoor-Backend\obj\Debug\net6.0\OutDoor-API.MvcApplicationPartsAssemblyInfo.cache
+C:\Faculdade\OutDoorBackend\OutDoor-Backend\obj\Debug\net6.0\OutDoor-API.dll
+C:\Faculdade\OutDoorBackend\OutDoor-Backend\obj\Debug\net6.0\refint\OutDoor-API.dll
+C:\Faculdade\OutDoorBackend\OutDoor-Backend\obj\Debug\net6.0\OutDoor-API.pdb

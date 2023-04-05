@@ -28,3 +28,18 @@ C:\Users\DTI Digital\Desktop\OutDoorBackend\OutDoor-Repository\obj\Debug\net6.0\
 C:\Users\DTI Digital\Desktop\OutDoorBackend\OutDoor-Repository\obj\Debug\net6.0\refint\OutDoor-Repository.dll
 C:\Users\DTI Digital\Desktop\OutDoorBackend\OutDoor-Repository\obj\Debug\net6.0\OutDoor-Repository.pdb
 C:\Users\DTI Digital\Desktop\OutDoorBackend\OutDoor-Repository\obj\Debug\net6.0\ref\OutDoor-Repository.dll
+C:\Faculdade\OutDoorBackend\OutDoor-Repository\bin\Debug\net6.0\OutDoor-Repository.deps.json
+C:\Faculdade\OutDoorBackend\OutDoor-Repository\bin\Debug\net6.0\OutDoor-Repository.dll
+C:\Faculdade\OutDoorBackend\OutDoor-Repository\bin\Debug\net6.0\OutDoor-Repository.pdb
+C:\Faculdade\OutDoorBackend\OutDoor-Repository\bin\Debug\net6.0\OutDoor-Models.dll
+C:\Faculdade\OutDoorBackend\OutDoor-Repository\bin\Debug\net6.0\OutDoor-Models.pdb
+C:\Faculdade\OutDoorBackend\OutDoor-Repository\obj\Debug\net6.0\OutDoor-Repository.csproj.AssemblyReference.cache
+C:\Faculdade\OutDoorBackend\OutDoor-Repository\obj\Debug\net6.0\OutDoor-Repository.GeneratedMSBuildEditorConfig.editorconfig
+C:\Faculdade\OutDoorBackend\OutDoor-Repository\obj\Debug\net6.0\OutDoor-Repository.AssemblyInfoInputs.cache
+C:\Faculdade\OutDoorBackend\OutDoor-Repository\obj\Debug\net6.0\OutDoor-Repository.AssemblyInfo.cs
+C:\Faculdade\OutDoorBackend\OutDoor-Repository\obj\Debug\net6.0\OutDoor-Repository.csproj.CoreCompileInputs.cache
+C:\Faculdade\OutDoorBackend\OutDoor-Repository\obj\Debug\net6.0\OutDoor-Repository.csproj.CopyComplete
+C:\Faculdade\OutDoorBackend\OutDoor-Repository\obj\Debug\net6.0\OutDoor-Repository.dll
+C:\Faculdade\OutDoorBackend\OutDoor-Repository\obj\Debug\net6.0\refint\OutDoor-Repository.dll
+C:\Faculdade\OutDoorBackend\OutDoor-Repository\obj\Debug\net6.0\OutDoor-Repository.pdb
+C:\Faculdade\OutDoorBackend\OutDoor-Repository\obj\Debug\net6.0\ref\OutDoor-Repository.dll

@@ -22,3 +22,11 @@ C:\Users\DTI Digital\Desktop\OutDoorBackend\OutDoor-Models\obj\Debug\net6.0\OutD
 C:\Users\DTI Digital\Desktop\OutDoorBackend\OutDoor-Models\obj\Debug\net6.0\refint\OutDoor-Models.dll
 C:\Users\DTI Digital\Desktop\OutDoorBackend\OutDoor-Models\obj\Debug\net6.0\OutDoor-Models.pdb
 C:\Users\DTI Digital\Desktop\OutDoorBackend\OutDoor-Models\obj\Debug\net6.0\ref\OutDoor-Models.dll
+C:\Faculdade\OutDoorBackend\OutDoor-Models\obj\Debug\net6.0\OutDoor-Models.csproj.AssemblyReference.cache
+C:\Faculdade\OutDoorBackend\OutDoor-Models\obj\Debug\net6.0\OutDoor-Models.GeneratedMSBuildEditorConfig.editorconfig
+C:\Faculdade\OutDoorBackend\OutDoor-Models\obj\Debug\net6.0\OutDoor-Models.AssemblyInfoInputs.cache
+C:\Faculdade\OutDoorBackend\OutDoor-Models\obj\Debug\net6.0\OutDoor-Models.AssemblyInfo.cs
+C:\Faculdade\OutDoorBackend\OutDoor-Models\obj\Debug\net6.0\OutDoor-Models.csproj.CoreCompileInputs.cache
+C:\Faculdade\OutDoorBackend\OutDoor-Models\obj\Debug\net6.0\OutDoor-Models.dll
+C:\Faculdade\OutDoorBackend\OutDoor-Models\obj\Debug\net6.0\refint\OutDoor-Models.dll
+C:\Faculdade\OutDoorBackend\OutDoor-Models\obj\Debug\net6.0\OutDoor-Models.pdb

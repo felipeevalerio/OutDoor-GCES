@@ -756,42 +756,42 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\DTI Digital\\.nuget\\packages\\": {},
+    "C:\\Users\\Thiago Melo\\.nuget\\packages\\": {},
     "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {},
-    "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\": {}
+    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\DTI Digital\\Desktop\\OutDoorBackend\\OutDoor-Services\\OutDoor-Services.csproj",
+      "projectUniqueName": "C:\\Faculdade\\OutDoorBackend\\OutDoor-Services\\OutDoor-Services.csproj",
       "projectName": "OutDoor-Services",
-      "projectPath": "C:\\Users\\DTI Digital\\Desktop\\OutDoorBackend\\OutDoor-Services\\OutDoor-Services.csproj",
-      "packagesPath": "C:\\Users\\DTI Digital\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\DTI Digital\\Desktop\\OutDoorBackend\\OutDoor-Services\\obj\\",
+      "projectPath": "C:\\Faculdade\\OutDoorBackend\\OutDoor-Services\\OutDoor-Services.csproj",
+      "packagesPath": "C:\\Users\\Thiago Melo\\.nuget\\packages\\",
+      "outputPath": "C:\\Faculdade\\OutDoorBackend\\OutDoor-Services\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
-        "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\"
+        "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
       ],
       "configFilePaths": [
-        "C:\\Users\\DTI Digital\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Thiago Melo\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
         "net6.0"
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+        "C:\\Program Files\\dotnet\\library-packs": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
         "net6.0": {
           "targetAlias": "net6.0",
           "projectReferences": {
-            "C:\\Users\\DTI Digital\\Desktop\\OutDoorBackend\\OutDoor-Models\\OutDoor-Models.csproj": {
-              "projectPath": "C:\\Users\\DTI Digital\\Desktop\\OutDoorBackend\\OutDoor-Models\\OutDoor-Models.csproj"
+            "C:\\Faculdade\\OutDoorBackend\\OutDoor-Models\\OutDoor-Models.csproj": {
+              "projectPath": "C:\\Faculdade\\OutDoorBackend\\OutDoor-Models\\OutDoor-Models.csproj"
             }
           }
         }
@@ -831,7 +831,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.102\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.402\\RuntimeIdentifierGraph.json"
       }
     }
   },
