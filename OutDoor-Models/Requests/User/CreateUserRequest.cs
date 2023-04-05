@@ -8,12 +8,12 @@ namespace OutDoor_Models.Requests.User
         [Required]
         public string Name { get; set; }
         [Required]
-        [StringLength(maximumLength: 50, MinimumLength = 6)]
+        [StringLength(maximumLength: 50, MinimumLength =  6)]
         public string Password { get; set; }
         [Required]
         [EmailAddress]
         public string Email { get; set; }
         [Required]
-        public UserTypes UserType { get; set; }
+        public string UserType { get; set; }
     }
 }

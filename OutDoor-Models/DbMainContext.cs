@@ -16,12 +16,6 @@ namespace OutDoor_Models
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
-            modelBuilder
-                .Entity<UserModel>()
-                .Property(u => u.UserType)
-                .HasConversion(
-                    e => e.ToString(),
-                    e => (UserTypes)Enum.Parse(typeof(UserTypes), e));
         }
 
 
