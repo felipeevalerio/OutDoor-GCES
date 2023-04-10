@@ -6,7 +6,10 @@ using System.Threading.Tasks;
 
 namespace OutDoor_Models.Models
 {
-    public enum Category
+    public class CategoryModel
     {
+        public string Id { get; set; }
+        public string Name { get; set; }
+
     }
 }

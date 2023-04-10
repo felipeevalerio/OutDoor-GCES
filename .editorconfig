@@ -11,3 +11,6 @@ dotnet_analyzer_diagnostic.severity = none
 
 # CS0168: A variável foi declarada, mas nunca foi usada
 dotnet_diagnostic.CS0168.severity = none
+
+# CS8634: O tipo não pode ser usado como parâmetro de tipo no tipo ou método genérico. A anulabilidade do argumento de tipo não corresponde à restrição 'class'.
+dotnet_diagnostic.CS8634.severity = none

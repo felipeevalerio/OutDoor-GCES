@@ -8,6 +8,8 @@ namespace OutDoor_Models
     public class DbMainContext : DbContext
     {
         public DbSet<UserModel> User { get; set; }
+        public DbSet<PostModel> Post { get; set; }
+        public DbSet<CategoryModel> Category { get; set; }
 
         public DbMainContext(DbContextOptions<DbMainContext> options) : base(options)
         {

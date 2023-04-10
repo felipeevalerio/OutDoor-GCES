@@ -30,3 +30,7 @@ C:\Faculdade\OutDoorBackend\OutDoor-Models\obj\Debug\net6.0\OutDoor-Models.cspro
 C:\Faculdade\OutDoorBackend\OutDoor-Models\obj\Debug\net6.0\OutDoor-Models.dll
 C:\Faculdade\OutDoorBackend\OutDoor-Models\obj\Debug\net6.0\refint\OutDoor-Models.dll
 C:\Faculdade\OutDoorBackend\OutDoor-Models\obj\Debug\net6.0\OutDoor-Models.pdb
+C:\Faculdade\OutDoorBackend\OutDoor-Models\bin\Debug\net6.0\OutDoor-Models.deps.json
+C:\Faculdade\OutDoorBackend\OutDoor-Models\bin\Debug\net6.0\OutDoor-Models.dll
+C:\Faculdade\OutDoorBackend\OutDoor-Models\bin\Debug\net6.0\OutDoor-Models.pdb
+C:\Faculdade\OutDoorBackend\OutDoor-Models\obj\Debug\net6.0\ref\OutDoor-Models.dll
