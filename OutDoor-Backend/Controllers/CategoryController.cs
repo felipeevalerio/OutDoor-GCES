@@ -16,7 +16,7 @@ namespace OutDoor_Backend.Controllers
         }
 
         [HttpGet]
-        [Route("/api/users/categories")]
+        [Route("/api/categories")]
         public async Task<IEnumerable<CategoryModel>?> getAllCategories()
         {
             return await CategoryService.getAllCategories();
