@@ -79,11 +79,9 @@ namespace OutDoor_Services
             return reponsePosts;
         }
 
-        public async Task<IEnumerable<InformationPostResponse>?> getAllPosts()
+        public async Task<string?> removePostById(string postId)
         {
-            
-
-            return reponsePosts;
+            return await PostRepository.deletePost(postId);
         }
     }
 }

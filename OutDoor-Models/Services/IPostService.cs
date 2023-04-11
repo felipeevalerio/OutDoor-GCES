@@ -15,5 +15,6 @@ namespace OutDoor_Models.Services
         public Task<string> createPost(CreatePostModelRequest request);
 
         public Task<IEnumerable<InformationPostResponse>?> getAllPosts();
+        public Task<string?> removePostById(string postId);
     }
 }

@@ -37,9 +37,9 @@ namespace OutDoor_Backend.Controllers
 
         [HttpDelete]
         [Route("/api/post")]
-        public async Task<string> delete([FromQuery string postId)
+        public async Task<string?> delete([FromQuery] string postId)
         {
-            return await postService.getAllPosts();
+            return await postService.removePostById(postId);
 
         }
     }

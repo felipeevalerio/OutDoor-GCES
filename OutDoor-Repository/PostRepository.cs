@@ -59,8 +59,12 @@ namespace OutDoor_Repository
         {
             try
             {
-                return MainContext.Remove(await MainContext.Post.FirstOrDefaultAsync(p => p.Id == postId)).Entity.Id;
-            }
+                var post = await MainContext.Post.FirstOrDefaultAsync(p => p.Id == postId);
+                if (post == null) return null;
+                var result = MainContext.Post.Remove(post).Entity.Id;
+                await MainContext.SaveChangesAsync();
+                return result;
+            }   
             catch (Exception ex)
             {
                 throw new RepositoryException("Um erro inesperado ocorreu ao deletar um post")

@@ -13,6 +13,7 @@ namespace OutDoor_Models.Repositorys
         public Task<IEnumerable<PostModel>?> getAllPosts();
 
         public Task<PostModel> createNewPost(PostModel post);
+        public  Task<string?> deletePost(string postId);
 
 
     }
