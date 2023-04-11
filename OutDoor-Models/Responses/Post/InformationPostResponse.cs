@@ -1,20 +1,18 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
+using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using OutDoor_Models.Models;
 
-namespace OutDoor_Models.Models
+namespace OutDoor_Models.Responses.Post
 {
-    public class PostModel
+    public class InformationPostResponse
     {
-        [Key]
-        public string  Id { get; set; }
-        [ForeignKey("Fk_User_Post")]
-        public string UserId { get; set; }
-        [ForeignKey("FK_Category_Post")]
+        public string Id { get; set; }
+        public UserModel User { get; set; }
         public string CategoryId { get; set; }
         public string Title { get; set; }
         public string City { get; set; }
@@ -25,7 +23,7 @@ namespace OutDoor_Models.Models
         public string? Image { get; set; }
         public int? Rating { get; set; }
         public DateTime CreatedAt { get; set; }
-        
+        public IEnumerable<CommentModel>? Comments { get; set; }
+
     }
 }
-

@@ -12,7 +12,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Requests\Post\" />
     <Folder Include="Responses\User\" />
     <Folder Include="Responses\Post\" />
   </ItemGroup>

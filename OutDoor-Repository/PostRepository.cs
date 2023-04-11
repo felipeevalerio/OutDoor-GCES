@@ -1,7 +1,11 @@
-﻿using OutDoor_Models.Repositorys;
+﻿using Microsoft.EntityFrameworkCore;
+using OutDoor_Models;
+using OutDoor_Models.Models;
+using OutDoor_Models.Repositorys;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Net;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -9,5 +13,63 @@ namespace OutDoor_Repository
 {
     public class PostRepository : IPostRepository
     {
+        public DbMainContext MainContext { get; set; }
+
+        public PostRepository(DbMainContext _mainContext)
+        {
+            MainContext = _mainContext;
+        }
+
+        public async Task<IEnumerable<PostModel>?> getAllPosts()
+        {
+            try
+            {
+                return await MainContext.Post.ToListAsync();
+
+            }catch(Exception ex)
+            {
+                throw new RepositoryException("Um erro inesperado ocorreu ao listar todos os posts")
+                {
+                    StatusCode = HttpStatusCode.InternalServerError,
+                    Source = nameof(PostRepository)
+                };
+            }
+        }
+
+        public async Task<PostModel> createNewPost(PostModel post)
+        {
+            try
+            {
+                var result = await MainContext.Post.AddAsync(post);
+                await MainContext.SaveChangesAsync();
+                return result.Entity;
+            }
+            catch (Exception ex)
+            {
+                throw new RepositoryException("Um erro inesperado ocorreu ao criar um post")
+                {
+                    StatusCode = HttpStatusCode.InternalServerError,
+                    Source = nameof(PostRepository)
+                };
+            }
+
+        }
+
+        public async Task<string?> deletePost(string postId)
+        {
+            try
+            {
+                return MainContext.Remove(await MainContext.Post.FirstOrDefaultAsync(p => p.Id == postId)).Entity.Id;
+            }
+            catch (Exception ex)
+            {
+                throw new RepositoryException("Um erro inesperado ocorreu ao deletar um post")
+                {
+                    StatusCode = HttpStatusCode.InternalServerError,
+                    Source = nameof(PostRepository)
+                };
+            }
+
+        }
     }
 }

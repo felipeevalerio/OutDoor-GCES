@@ -12,6 +12,8 @@ namespace OutDoor_Models.Models
         public string Image { get; set; }
         public string Review { get; set; }
         public DateTime CreatedAt { get; set; }
+        public string UserId { get; set; }
+        public string PostId { get; set; } 
 
     }
 }

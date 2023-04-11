@@ -10,6 +10,7 @@ namespace OutDoor_Models
         public DbSet<UserModel> User { get; set; }
         public DbSet<PostModel> Post { get; set; }
         public DbSet<CategoryModel> Category { get; set; }
+        public DbSet<CommentModel> Comment { get; set; }
 
         public DbMainContext(DbContextOptions<DbMainContext> options) : base(options)
         {

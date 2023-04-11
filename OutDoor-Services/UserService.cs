@@ -37,13 +37,13 @@ namespace OutDoor_Services
         public async Task<UserModel?> LoginUser(LoginRequest user)
         {
             var userFounded = await UserRepository.GetUserByEmail(user.Email);
-            if (userFounded == null) throw new ServiceException("User not founded while trying to login")
+            if (userFounded == null) throw new ServiceException("Usuário não pode ser encontrado")
             {
                 StatusCode = HttpStatusCode.Unauthorized,
                 Source = nameof(UserRepository)
             };
 
-            if (!user.Password.Equals(CryptographyService.Decrypt(userFounded.Password))) throw new ServiceException("Invalid password while trying to login") 
+            if (!user.Password.Equals(CryptographyService.Decrypt(userFounded.Password))) throw new ServiceException("Usuário e/ou senha incorretos") 
             {
                 StatusCode = HttpStatusCode.Unauthorized,
                 Source = nameof(UserRepository)
