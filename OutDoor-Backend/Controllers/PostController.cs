@@ -29,7 +29,7 @@ namespace OutDoor_Backend.Controllers
 
         [HttpGet]
         [Route("/api/post")]
-        public async Task<IEnumerable<InformationPostResponse>?> get([FromBody] CreatePostModelRequest request)
+        public async Task<IEnumerable<InformationPostResponse>?> get()
         {
             return await postService.getAllPosts();
 
