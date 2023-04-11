@@ -14,3 +14,9 @@ dotnet_diagnostic.CS0168.severity = none
 
 # CS8634: O tipo não pode ser usado como parâmetro de tipo no tipo ou método genérico. A anulabilidade do argumento de tipo não corresponde à restrição 'class'.
 dotnet_diagnostic.CS8634.severity = none
+
+# CS8601: Possível atribuição de referência nula.
+dotnet_diagnostic.CS8601.severity = none
+
+# CS8602: Desreferência de uma referência possivelmente nula.
+dotnet_diagnostic.CS8602.severity = none

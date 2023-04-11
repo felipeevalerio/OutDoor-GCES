@@ -6,6 +6,7 @@ using OutDoor_Models.Services;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Net;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -23,8 +24,17 @@ namespace OutDoor_Services
             CommentRepository = commentRepository;
         }
 
-        public async Task<string> createPost(CreatePostModelRequest request)
+        public async Task<InformationPostResponse> createPost(CreatePostModelRequest request)
         {
+            //Check if user is Provider
+            var user = await UserRepository.GetById(request.UserId);
+            if (user.UserType != "provider") throw new ServiceException("Apenas prestadores de serviço podem criar posts")
+            {
+                StatusCode = HttpStatusCode.Forbidden,
+                Source = nameof(UserRepository)
+            };
+
+
             var post = new PostModel()
             {
 
@@ -44,8 +54,22 @@ namespace OutDoor_Services
 
             var createdPost = await PostRepository.createNewPost(post);
 
-            return createdPost.Id;
-        }
+            return new InformationPostResponse()
+            {
+                Id = createdPost.Id,
+                User = user,
+                CategoryId = createdPost.CategoryId,
+                Title = createdPost.Title,
+                City = createdPost.City,
+                MobileNumber = createdPost.MobileNumber,
+                District = createdPost.District,
+                State = createdPost.State,
+                Image = createdPost.Image,
+                Rating = createdPost.Rating,
+                CreatedAt = createdPost.CreatedAt,
+                Comments = new List<CommentModel>()
+            };
+    }
 
         public async Task<IEnumerable<InformationPostResponse>?> getAllPosts()
         {
@@ -60,7 +84,7 @@ namespace OutDoor_Services
                 reponsePosts.Add(new InformationPostResponse() { 
                     Id = post.Id,
                     //Get User by Id
-                    User = await UserRepository.GetById(post.Id),
+                    User = await UserRepository.GetById(post.UserId),
                     CategoryId = post.CategoryId,
                     Title= post.Title,
                     City= post.City,

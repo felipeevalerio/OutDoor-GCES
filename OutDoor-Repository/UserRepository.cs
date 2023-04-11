@@ -74,9 +74,21 @@ namespace OutDoor_Repository
             }
         }
 
-        public Task<UserModel> GetById(string id)
+        public async Task<UserModel?> GetById(string id)
         {
-            throw new NotImplementedException();
+            try
+            {
+                return await _mainContext.User.FirstOrDefaultAsync(u => u.Id == id);
+
+            }
+            catch (Exception ex)
+            {
+                throw new RepositoryException("Um erro inesperado ocorreu ao buscar um usuário")
+                {
+                    StatusCode = HttpStatusCode.InternalServerError,
+                    Source = nameof(UserRepository)
+                };
+            }
         }
 
         public Task<UserModel> UpdateUser(UserModel user)

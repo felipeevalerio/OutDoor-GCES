@@ -12,7 +12,7 @@ namespace OutDoor_Models.Services
     public interface IPostService
     {
 
-        public Task<string> createPost(CreatePostModelRequest request);
+        public Task<InformationPostResponse> createPost(CreatePostModelRequest request);
 
         public Task<IEnumerable<InformationPostResponse>?> getAllPosts();
         public Task<string?> removePostById(string postId);

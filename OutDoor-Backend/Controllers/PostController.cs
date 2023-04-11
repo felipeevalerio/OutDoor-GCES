@@ -21,7 +21,7 @@ namespace OutDoor_Backend.Controllers
 
         [HttpPost]
         [Route("/api/post")]
-        public async Task<string?> create([FromBody] CreatePostModelRequest request)
+        public async Task<InformationPostResponse?> create([FromBody] CreatePostModelRequest request)
         {
             return await postService.createPost(request);
 
