@@ -23,7 +23,7 @@ namespace OutDoor_Models.Requests.Post
         [Required]
         public string State { get; set; }
         [Required]
-        [StringLength(maximumLength: 50, MinimumLength = 11)]
+        [StringLength(maximumLength: 50, MinimumLength = 13)]
         public string ContactNumber { get; set; }
         [Required]
         public string UserId { get; set; }
