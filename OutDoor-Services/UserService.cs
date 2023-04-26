@@ -13,10 +13,12 @@ namespace OutDoor_Services
     public class UserService : IUserService
     {
         public IUserRepository UserRepository { get; set; }
+        public ICryptographyService cryptographyService { get; set; }
 
-        public UserService(IUserRepository userRepository)
+        public UserService(IUserRepository userRepository,ICryptographyService cryptographyService)
         {
-            UserRepository = userRepository;
+            this.UserRepository = userRepository;
+            this.cryptographyService = cryptographyService;
         }
 
         public async Task<UserModel> CreateUser(CreateUserRequest user)
@@ -25,7 +27,7 @@ namespace OutDoor_Services
                 Id = Guid.NewGuid().ToString(),
                 Name = user.Name,
                 Email = user.Email,
-                Password = CryptographyService.Encrypt(user.Password),
+                Password = cryptographyService.Encrypt(user.Password),
                 UserType = user.UserType,
                 CreatedAt = DateTime.Now
             };
@@ -43,7 +45,7 @@ namespace OutDoor_Services
                 Source = nameof(UserRepository)
             };
 
-            if (!user.Password.Equals(CryptographyService.Decrypt(userFounded.Password))) throw new ServiceException("Usuário e/ou senha incorretos") 
+            if (!user.Password.Equals(cryptographyService.Decrypt(userFounded.Password))) throw new ServiceException("Usuário e/ou senha incorretos") 
             {
                 StatusCode = HttpStatusCode.Unauthorized,
                 Source = nameof(UserRepository)

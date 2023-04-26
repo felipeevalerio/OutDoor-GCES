@@ -144,3 +144,5 @@ C:\Faculdade\OutDoorBackend\OutDoor-Backend\obj\Debug\net6.0\scopedcss\bundle\Ou
 C:\Faculdade\OutDoorBackend\OutDoor-Backend\obj\Debug\net6.0\OutDoor-API.csproj.CopyComplete
 C:\Faculdade\OutDoorBackend\OutDoor-Backend\obj\Debug\net6.0\OutDoor-API.genruntimeconfig.cache
 C:\Faculdade\OutDoorBackend\OutDoor-Backend\obj\Debug\net6.0\ref\OutDoor-API.dll
+C:\Faculdade\OutDoorBackend\OutDoor-Backend\bin\Debug\net6.0\Newtonsoft.Json.dll
+C:\Faculdade\OutDoorBackend\OutDoor-Backend\bin\Debug\net6.0\RabbitMQ.Client.dll

@@ -1,4 +1,5 @@
 ﻿using OutDoor_Models.Models;
+using OutDoor_Models.Repository;
 using OutDoor_Models.Repositorys;
 using OutDoor_Models.Requests.Post;
 using OutDoor_Models.Responses.Post;
@@ -101,6 +102,34 @@ namespace OutDoor_Services
             }
 
             return reponsePosts;
+        }
+
+        public async Task<InformationPostResponse?> getPostInfoById(string postId)
+        {
+            var post = await PostRepository.getPostById(postId);
+
+            if (post == null) return null;
+
+            var reponsePosts = new InformationPostResponse();
+
+            return new InformationPostResponse()
+            {
+                Id = post.Id,
+                //Get User by Id
+                User = await UserRepository.GetById(post.UserId),
+                CategoryId = post.CategoryId,
+                Title = post.Title,
+                City = post.City,
+                ContactNumber = post.MobileNumber,
+                District = post.District,
+                State = post.State,
+                Description = post.Description,
+                Image = post.Image,
+                Rating = post.Rating,
+                CreatedAt = post.CreatedAt,
+                Comments = CommentRepository.getCommentsByPostId(post.Id),
+
+            };
         }
 
         public async Task<string?> removePostById(string postId)

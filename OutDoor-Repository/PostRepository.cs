@@ -36,6 +36,23 @@ namespace OutDoor_Repository
             }
         }
 
+        public async Task<PostModel?> getPostById(string postId)
+        {
+            try
+            {
+                return await MainContext.Post.FirstOrDefaultAsync(p => p.Id == postId);
+
+            }
+            catch (Exception ex)
+            {
+                throw new RepositoryException("Um erro inesperado ocorreu ao listar todos os posts")
+                {
+                    StatusCode = HttpStatusCode.InternalServerError,
+                    Source = nameof(PostRepository)
+                };
+            }
+        }
+
         public async Task<PostModel> createNewPost(PostModel post)
         {
             try

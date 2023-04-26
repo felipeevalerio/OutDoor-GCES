@@ -1,6 +1,6 @@
 ﻿using OutDoor_Models;
 using OutDoor_Models.Models;
-using OutDoor_Models.Services;
+using OutDoor_Models.Repository;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -17,6 +17,33 @@ namespace OutDoor_Repository
         public CommentRepository(DbMainContext mainContext)
         {
             this.mainContext = mainContext;
+        }
+
+        public async Task<CommentModel> createNewComent(CreateCommentRequestModel comment)
+        {
+
+            try
+            {
+                return (await mainContext.Comment.AddAsync(new CommentModel()
+                {
+                    Id = Guid.NewGuid().ToString(),
+                    Image = comment.Image,
+                    Review = comment.Review,
+                    CreatedAt = DateTime.Now,
+                    UserId = comment.UserId,
+                    PostId = comment.PostId
+
+                })).Entity;
+
+            }
+            catch (Exception ex)
+            {
+                throw new RepositoryException("Um erro inesperado ocorreu ao publicar o comentario")
+                {
+                    StatusCode = HttpStatusCode.InternalServerError,
+                    Source = nameof(CommentRepository)
+                };
+            }
         }
 
         public IEnumerable<CommentModel> getCommentsByPostId(string postId)

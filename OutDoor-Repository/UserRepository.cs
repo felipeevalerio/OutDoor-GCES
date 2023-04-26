@@ -38,7 +38,7 @@ namespace OutDoor_Repository
 
             }catch(Exception ex)
             {
-                throw new RepositoryException("A Unexpected Exception ocorrued while trying to create a user")
+                throw new RepositoryException("Um erro inesperado ocorreu ao tentar criar um usuário")
                 {
                     StatusCode = HttpStatusCode.InternalServerError,
                     Source = nameof(UserRepository)

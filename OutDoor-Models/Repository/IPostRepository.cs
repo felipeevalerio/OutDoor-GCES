@@ -11,9 +11,9 @@ namespace OutDoor_Models.Repositorys
     public interface IPostRepository
     {
         public Task<IEnumerable<PostModel>?> getAllPosts();
-
         public Task<PostModel> createNewPost(PostModel post);
         public  Task<string?> deletePost(string postId);
+        public  Task<PostModel?> getPostById(string postId);
 
 
     }

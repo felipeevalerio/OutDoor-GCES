@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "lzpJbC/4wBtTRwDN5eCZn1Pf0usLH+w+/G4dMCs/wewiSSBUZ+/B2ZqN99A0r2ANdWJl8IAalQlTwjq2E5qgiQ==",
+  "dgSpecHash": "dTqFeNCKLfMQmQWujKx/+DZNMsEhhDeu1szn4GFqi6vo4kymtBlmzG4VtLr8WYT81RrrI91M8wEGlHFv+/KOEQ==",
   "success": true,
   "projectFilePath": "C:\\Faculdade\\OutDoorBackend\\OutDoor-Backend\\OutDoor-API.csproj",
   "expectedPackageFiles": [
@@ -22,14 +22,17 @@
     "C:\\Users\\Thiago Melo\\.nuget\\packages\\microsoft.extensions.primitives\\6.0.0\\microsoft.extensions.primitives.6.0.0.nupkg.sha512",
     "C:\\Users\\Thiago Melo\\.nuget\\packages\\microsoft.openapi\\1.2.3\\microsoft.openapi.1.2.3.nupkg.sha512",
     "C:\\Users\\Thiago Melo\\.nuget\\packages\\microsoft.web.infrastructure\\1.0.0\\microsoft.web.infrastructure.1.0.0.nupkg.sha512",
+    "C:\\Users\\Thiago Melo\\.nuget\\packages\\newtonsoft.json\\13.0.3\\newtonsoft.json.13.0.3.nupkg.sha512",
     "C:\\Users\\Thiago Melo\\.nuget\\packages\\npgsql\\6.0.8\\npgsql.6.0.8.nupkg.sha512",
     "C:\\Users\\Thiago Melo\\.nuget\\packages\\npgsql.entityframeworkcore.postgresql\\6.0.8\\npgsql.entityframeworkcore.postgresql.6.0.8.nupkg.sha512",
+    "C:\\Users\\Thiago Melo\\.nuget\\packages\\rabbitmq.client\\6.0.0\\rabbitmq.client.6.0.0.nupkg.sha512",
     "C:\\Users\\Thiago Melo\\.nuget\\packages\\swashbuckle.aspnetcore\\6.2.3\\swashbuckle.aspnetcore.6.2.3.nupkg.sha512",
     "C:\\Users\\Thiago Melo\\.nuget\\packages\\swashbuckle.aspnetcore.swagger\\6.2.3\\swashbuckle.aspnetcore.swagger.6.2.3.nupkg.sha512",
     "C:\\Users\\Thiago Melo\\.nuget\\packages\\swashbuckle.aspnetcore.swaggergen\\6.2.3\\swashbuckle.aspnetcore.swaggergen.6.2.3.nupkg.sha512",
     "C:\\Users\\Thiago Melo\\.nuget\\packages\\swashbuckle.aspnetcore.swaggerui\\6.2.3\\swashbuckle.aspnetcore.swaggerui.6.2.3.nupkg.sha512",
     "C:\\Users\\Thiago Melo\\.nuget\\packages\\system.collections.immutable\\6.0.0\\system.collections.immutable.6.0.0.nupkg.sha512",
     "C:\\Users\\Thiago Melo\\.nuget\\packages\\system.diagnostics.diagnosticsource\\6.0.0\\system.diagnostics.diagnosticsource.6.0.0.nupkg.sha512",
+    "C:\\Users\\Thiago Melo\\.nuget\\packages\\system.memory\\4.5.4\\system.memory.4.5.4.nupkg.sha512",
     "C:\\Users\\Thiago Melo\\.nuget\\packages\\system.runtime.compilerservices.unsafe\\6.0.0\\system.runtime.compilerservices.unsafe.6.0.0.nupkg.sha512",
     "C:\\Users\\Thiago Melo\\.nuget\\packages\\system.security.cryptography.protecteddata\\7.0.1\\system.security.cryptography.protecteddata.7.0.1.nupkg.sha512"
   ],

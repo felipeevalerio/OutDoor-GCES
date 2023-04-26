@@ -2,12 +2,13 @@
 using static System.Formats.Asn1.AsnWriter;
 using System.Text;
 using System.Security.Cryptography;
+using OutDoor_Models.Services;
 
 namespace OutDoor_Services.UtilServices
 {
-    public static class CryptographyService
+    public class CryptographyService : ICryptographyService
     {
-        public static string Encrypt(string strToBeEncripted)
+        public string Encrypt(string strToBeEncripted)
         {
             //encrypt data
             var data = Encoding.Unicode.GetBytes(strToBeEncripted);
@@ -15,7 +16,7 @@ namespace OutDoor_Services.UtilServices
             //return as base64 string
             return Convert.ToBase64String(encrypted);
         }
-        public static string Decrypt(string cipher)
+        public string Decrypt(string cipher)
         {
 
             //parse base64 string

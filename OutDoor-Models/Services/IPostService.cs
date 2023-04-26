@@ -13,8 +13,8 @@ namespace OutDoor_Models.Services
     {
 
         public Task<InformationPostResponse> createPost(CreatePostModelRequest request);
-
         public Task<IEnumerable<InformationPostResponse>?> getAllPosts();
         public Task<string?> removePostById(string postId);
+        public Task<InformationPostResponse?> getPostInfoById(string postId);
     }
 }
