@@ -24,7 +24,7 @@ namespace OutDoor_Repository
 
             try
             {
-                return (await mainContext.Comment.AddAsync(new CommentModel()
+                var result = (await mainContext.Comment.AddAsync(new CommentModel()
                 {
                     Id = Guid.NewGuid().ToString(),
                     Image = comment.Image,
@@ -34,6 +34,9 @@ namespace OutDoor_Repository
                     PostId = comment.PostId
 
                 })).Entity;
+
+                await mainContext.SaveChangesAsync();
+                return result;
 
             }
             catch (Exception ex)
