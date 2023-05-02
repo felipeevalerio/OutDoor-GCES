@@ -2,5 +2,5 @@
 
 using Outdoor_Notifications;
 
-NotificationConsumer.starQueueConsumer();
+NotificationConsumer.startQueueConsumer();
 Console.ReadKey();

@@ -33,7 +33,7 @@ namespace OutDoor_Backend.Controllers
             try //Try send Notification to Queue
             {
                 var PostInformation = await PostService.getPostInfoById(request.PostId);
-                RabbitMQService.SendNotifiationToQueue<NotificationModel>(new NotificationModel()
+                RabbitMQService.SendNotificationToQueue<NotificationModel>(new NotificationModel()
                 {
                     PostName = PostInformation.Title,
                     UserEmail = PostInformation.User.Email,

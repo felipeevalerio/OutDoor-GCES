@@ -35,6 +35,7 @@ namespace OutDoor_Backend.Controllers
 
         }
 
+
         [HttpDelete]
         [Route("/api/post")]
         public async Task<string?> delete([FromQuery] string postId)

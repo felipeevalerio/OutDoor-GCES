@@ -19,7 +19,7 @@ namespace Outdoor_Notifications
     public static class NotificationConsumer
     {
         
-        public static void starQueueConsumer()
+        public static void startQueueConsumer()
         {
             var factory = new ConnectionFactory();// default door -> 15672
             var connection = factory.CreateConnection();
