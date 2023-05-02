@@ -13,10 +13,10 @@ namespace OutDoor_Services.UtilServices
     {
         public void SendNotifiationToQueue<T>(T message)
         {
-            var factory = new ConnectionFactory { HostName = "localhost" };
+            var factory = new ConnectionFactory();
             var connection = factory.CreateConnection();
             var channel = connection.CreateModel();
-            channel.QueueDeclare("Notifications", exclusive: false);
+            channel.QueueDeclare("Notifications", exclusive: false, autoDelete: false, arguments: null);
             var json = JsonConvert.SerializeObject(message);
             var body = Encoding.UTF8.GetBytes(json);
             channel.BasicPublish(exchange: "", routingKey: "Notifications", body: body);
