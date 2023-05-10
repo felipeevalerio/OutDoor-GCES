@@ -11,9 +11,16 @@ namespace OutDoor_Services.UtilServices
 {
     public class RabbitMQService : IRabbitMQService
     {
-        public void SendNotifiationToQueue<T>(T message)
+        public void SendNotificationToQueue<T>(T message)
         {
-            var factory = new ConnectionFactory();
+            var factory = new ConnectionFactory()
+            {
+                HostName = "jackal-01.rmq.cloudamqp.com",
+                Password = "pwtxZayVOSwMb_MH4S_bRYcmAUrpT8se",
+                VirtualHost = "zupfssnl",
+                UserName = "zupfssnl",
+                Port = 5672,
+            };
             var connection = factory.CreateConnection();
             var channel = connection.CreateModel();
             channel.QueueDeclare("Notifications", exclusive: false, autoDelete: false, arguments: null);

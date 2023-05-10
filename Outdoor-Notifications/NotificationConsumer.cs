@@ -9,9 +9,6 @@ using System.Text.Json.Serialization;
 using System.Net.Http.Json;
 using Newtonsoft.Json;
 
-//Quick run for docker test  -> docker run --rm -it -p 15672:15672 -p 5672:5672 --name OutdoorNotify rabbitmq:3-management
-//user: guest 
-//password: guest
 
 
 namespace Outdoor_Notifications
@@ -21,7 +18,14 @@ namespace Outdoor_Notifications
         
         public static void startQueueConsumer()
         {
-            var factory = new ConnectionFactory();// default door -> 15672
+            var factory = new ConnectionFactory()
+            {
+                HostName = "jackal-01.rmq.cloudamqp.com",
+                Password = "pwtxZayVOSwMb_MH4S_bRYcmAUrpT8se",
+                VirtualHost = "zupfssnl",
+                UserName = "zupfssnl",
+                Port = 5672,
+            };
             var connection = factory.CreateConnection();
             var channel = connection.CreateModel();
             channel.QueueDeclare("Notifications", exclusive: false, autoDelete: false);

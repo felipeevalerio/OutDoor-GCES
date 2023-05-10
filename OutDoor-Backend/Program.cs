@@ -15,6 +15,9 @@ builder.Services.AddSwaggerGen();
 #else
     var varConnectionString = builder.Configuration.GetConnectionString("DataBaseProd");
 #endif
+
+//database prod => User ID=bkvlcoel;Password=0PwVSfXkb1IdKpcVT3q-oNq-4_qHMbF1;Host=silly.db.elephantsql.com;Database=bkvlcoel
+
 builder.Services.AddDbContext<DbMainContext>(options => options.UseNpgsql(varConnectionString));
 
 ConfigScoped configuration = new ConfigScoped();
@@ -31,7 +34,7 @@ builder.Services.AddCors(options =>
     options.AddPolicy(name: MyAllowSpecificOrigins,
                       policy =>
                       {
-                          policy.WithOrigins("http://localhost:3000", "http://localhost:49400")
+                          policy.WithOrigins("http://localhost:3000", "http://localhost:49400", "https://outdoor-frontend.vercel.app")
                             .AllowAnyHeader()
                             .AllowAnyMethod();
                       });
