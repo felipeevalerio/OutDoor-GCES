@@ -34,12 +34,5 @@ namespace OutDoor_Backend.Controllers
 
             return Ok(result);
         }
-
-        [HttpGet]
-        [Route("/teste")]
-        public async Task<ActionResult> Teste()
-        {
-            return Ok();
-        }
     }
 }

@@ -27,6 +27,8 @@ namespace OutDoor_Backend
             builder.Services.AddScoped<ICryptographyService, CryptographyService>();
             builder.Services.AddScoped<IRabbitMQService, RabbitMQService>();
             builder.Services.AddScoped<ICommentService, CommentService>();
+            builder.Services.AddScoped<IConsumerService, ConsumerService>();
+            builder.Services.AddScoped<IEmailService, EmailService>();
 
             return builder;
         }

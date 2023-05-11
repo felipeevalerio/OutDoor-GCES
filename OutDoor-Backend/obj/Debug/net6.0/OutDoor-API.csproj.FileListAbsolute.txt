@@ -146,3 +146,4 @@ C:\Faculdade\OutDoorBackend\OutDoor-Backend\obj\Debug\net6.0\OutDoor-API.genrunt
 C:\Faculdade\OutDoorBackend\OutDoor-Backend\obj\Debug\net6.0\ref\OutDoor-API.dll
 C:\Faculdade\OutDoorBackend\OutDoor-Backend\bin\Debug\net6.0\Newtonsoft.Json.dll
 C:\Faculdade\OutDoorBackend\OutDoor-Backend\bin\Debug\net6.0\RabbitMQ.Client.dll
+C:\Faculdade\OutDoorBackend\OutDoor-Backend\bin\Debug\net6.0\System.Threading.Channels.dll

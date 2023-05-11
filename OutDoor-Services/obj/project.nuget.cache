@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "gJ/BxIwmqyuulhx0jD+sk9RxMuu1cOApXguocEsYfdEsAmgwwVdvKgZqM5Zi5u7AFOpQvnF1o5OQRcTiPd+lUA==",
+  "dgSpecHash": "b4u+9H18+rN/DEu0Auh+pVqMQ0cBnFuZBxcSpjdDozQp9W3DQuPlVQBXhBDC5ElTJkpt2bjbLB/kLKudNVSiWg==",
   "success": true,
   "projectFilePath": "C:\\Faculdade\\OutDoorBackend\\OutDoor-Services\\OutDoor-Services.csproj",
   "expectedPackageFiles": [
@@ -19,12 +19,13 @@
     "C:\\Users\\Thiago Melo\\.nuget\\packages\\microsoft.extensions.primitives\\6.0.0\\microsoft.extensions.primitives.6.0.0.nupkg.sha512",
     "C:\\Users\\Thiago Melo\\.nuget\\packages\\microsoft.web.infrastructure\\1.0.0\\microsoft.web.infrastructure.1.0.0.nupkg.sha512",
     "C:\\Users\\Thiago Melo\\.nuget\\packages\\newtonsoft.json\\13.0.3\\newtonsoft.json.13.0.3.nupkg.sha512",
-    "C:\\Users\\Thiago Melo\\.nuget\\packages\\rabbitmq.client\\6.0.0\\rabbitmq.client.6.0.0.nupkg.sha512",
+    "C:\\Users\\Thiago Melo\\.nuget\\packages\\rabbitmq.client\\6.5.0\\rabbitmq.client.6.5.0.nupkg.sha512",
     "C:\\Users\\Thiago Melo\\.nuget\\packages\\system.collections.immutable\\6.0.0\\system.collections.immutable.6.0.0.nupkg.sha512",
     "C:\\Users\\Thiago Melo\\.nuget\\packages\\system.diagnostics.diagnosticsource\\6.0.0\\system.diagnostics.diagnosticsource.6.0.0.nupkg.sha512",
-    "C:\\Users\\Thiago Melo\\.nuget\\packages\\system.memory\\4.5.4\\system.memory.4.5.4.nupkg.sha512",
+    "C:\\Users\\Thiago Melo\\.nuget\\packages\\system.memory\\4.5.5\\system.memory.4.5.5.nupkg.sha512",
     "C:\\Users\\Thiago Melo\\.nuget\\packages\\system.runtime.compilerservices.unsafe\\6.0.0\\system.runtime.compilerservices.unsafe.6.0.0.nupkg.sha512",
-    "C:\\Users\\Thiago Melo\\.nuget\\packages\\system.security.cryptography.protecteddata\\7.0.1\\system.security.cryptography.protecteddata.7.0.1.nupkg.sha512"
+    "C:\\Users\\Thiago Melo\\.nuget\\packages\\system.security.cryptography.protecteddata\\7.0.1\\system.security.cryptography.protecteddata.7.0.1.nupkg.sha512",
+    "C:\\Users\\Thiago Melo\\.nuget\\packages\\system.threading.channels\\7.0.0\\system.threading.channels.7.0.0.nupkg.sha512"
   ],
   "logs": [
     {

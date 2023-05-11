@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "4K1Blfmq6zfpawWUEKFSCMnrPhmwA4VfRtZzyfqhx1iyU4JAgGfYgalMr/0y6NynRVlvd+v3aWyQ+5JB1hBLig==",
+  "dgSpecHash": "pHpfNCzw49/fQbQNJmRlrAhRZaDVljY7y63MeI7Lcoj6DNnsm3ri+RTHw4D3yx0SRfEQ56pTdhALIH6CfQrYxQ==",
   "success": true,
   "projectFilePath": "C:\\Faculdade\\OutDoorBackend\\OutDoor-Repository\\OutDoor-Repository.csproj",
   "expectedPackageFiles": [
@@ -15,9 +15,12 @@
     "C:\\Users\\Thiago Melo\\.nuget\\packages\\microsoft.extensions.logging.abstractions\\6.0.0\\microsoft.extensions.logging.abstractions.6.0.0.nupkg.sha512",
     "C:\\Users\\Thiago Melo\\.nuget\\packages\\microsoft.extensions.options\\6.0.0\\microsoft.extensions.options.6.0.0.nupkg.sha512",
     "C:\\Users\\Thiago Melo\\.nuget\\packages\\microsoft.extensions.primitives\\6.0.0\\microsoft.extensions.primitives.6.0.0.nupkg.sha512",
+    "C:\\Users\\Thiago Melo\\.nuget\\packages\\rabbitmq.client\\6.5.0\\rabbitmq.client.6.5.0.nupkg.sha512",
     "C:\\Users\\Thiago Melo\\.nuget\\packages\\system.collections.immutable\\6.0.0\\system.collections.immutable.6.0.0.nupkg.sha512",
     "C:\\Users\\Thiago Melo\\.nuget\\packages\\system.diagnostics.diagnosticsource\\6.0.0\\system.diagnostics.diagnosticsource.6.0.0.nupkg.sha512",
-    "C:\\Users\\Thiago Melo\\.nuget\\packages\\system.runtime.compilerservices.unsafe\\6.0.0\\system.runtime.compilerservices.unsafe.6.0.0.nupkg.sha512"
+    "C:\\Users\\Thiago Melo\\.nuget\\packages\\system.memory\\4.5.5\\system.memory.4.5.5.nupkg.sha512",
+    "C:\\Users\\Thiago Melo\\.nuget\\packages\\system.runtime.compilerservices.unsafe\\6.0.0\\system.runtime.compilerservices.unsafe.6.0.0.nupkg.sha512",
+    "C:\\Users\\Thiago Melo\\.nuget\\packages\\system.threading.channels\\7.0.0\\system.threading.channels.7.0.0.nupkg.sha512"
   ],
   "logs": []
 }
