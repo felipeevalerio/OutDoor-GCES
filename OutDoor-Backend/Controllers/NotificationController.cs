@@ -20,7 +20,7 @@ namespace OutDoor_Backend.Controllers
             this.ConsumerService = consumerService;
         }
 
-        [HttpPost]
+        [HttpGet]
         [Route("/api/consumer")]
         public ConfirmConsumerModel initializeConsumer()
         {
