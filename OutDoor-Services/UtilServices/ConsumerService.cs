@@ -72,13 +72,11 @@ namespace OutDoor_Services.UtilServices
                 };
                 conn.BasicConsume(queue: "Notifications", autoAck: true, consumer: consumer);
 
-                if (conn.ConsumerCount("Notifications") > 0) return new ConfirmConsumerModel()
-                {
+                return (conn.ConsumerCount("Notifications") > 0) ? 
+                 new ConfirmConsumerModel() {
                     message = "Consumidor iniciado",
                     startedAt = DateTime.Now
-                };
-
-                return new ConfirmConsumerModel()
+                } : new ConfirmConsumerModel()
                 {
                     message = "Consumidor não iniciado, verficiar manualmente"
                 };
