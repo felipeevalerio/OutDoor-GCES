@@ -27,7 +27,8 @@ namespace OutDoor_Services
                 Id = Guid.NewGuid().ToString(),
                 Name = user.Name,
                 Email = user.Email,
-                Password = cryptographyService.Encrypt(user.Password),
+                //Password = cryptographyService.Encrypt(user.Password),
+                Password = user.Password,
                 UserType = user.UserType,
                 CreatedAt = DateTime.Now
             };
@@ -45,7 +46,8 @@ namespace OutDoor_Services
                 Source = nameof(UserRepository)
             };
 
-            if (!user.Password.Equals(cryptographyService.Decrypt(userFounded.Password))) throw new ServiceException("Usuário e/ou senha incorretos") 
+            //if (!user.Password.Equals(cryptographyService.Decrypt(userFounded.Password))) throw new ServiceException("Usuário e/ou senha incorretos") 
+            if (!user.Password.Equals(userFounded.Password)) throw new ServiceException("Usuário e/ou senha incorretos") 
             {
                 StatusCode = HttpStatusCode.Unauthorized,
                 Source = nameof(UserRepository)
