@@ -11,7 +11,7 @@ builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
 #if DEBUG
-    var varConnectionString = builder.Configuration.GetConnectionString("DataBaseDev");
+    var varConnectionString = builder.Configuration.GetConnectionString("DataBaseProd");
 #else
     var varConnectionString = builder.Configuration.GetConnectionString("DataBaseProd");
 #endif

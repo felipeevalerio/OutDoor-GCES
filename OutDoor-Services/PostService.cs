@@ -136,5 +136,12 @@ namespace OutDoor_Services
         {
             return await PostRepository.deletePost(postId);
         }
+
+
+        public async Task<PostModel?> EditPost(EditPostModelRequestModel post)
+        {
+            return await PostRepository.UpdatePost(post);
+            
+        }
     }
 }

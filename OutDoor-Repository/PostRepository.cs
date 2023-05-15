@@ -2,6 +2,7 @@
 using OutDoor_Models;
 using OutDoor_Models.Models;
 using OutDoor_Models.Repositorys;
+using OutDoor_Models.Requests.Post;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -91,6 +92,26 @@ namespace OutDoor_Repository
                 };
             }
 
+        }
+
+        public async Task<PostModel?> UpdatePost(EditPostModelRequestModel Post)
+        {
+            try
+            {
+                var post = await MainContext.Post.FirstOrDefaultAsync(p => p.Id == Post.Id);
+                if (post == null) return null;
+                var result = MainContext.Post.Update(post).Entity;
+                await MainContext.SaveChangesAsync();
+                return result;
+            }
+            catch (Exception ex)
+            {
+                throw new RepositoryException("Um erro inesperado ocorreu ao editar um post")
+                {
+                    StatusCode = HttpStatusCode.InternalServerError,
+                    Source = nameof(PostRepository)
+                };
+            }
         }
     }
 }

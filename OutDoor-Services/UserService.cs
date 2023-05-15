@@ -7,18 +7,21 @@ using System;
 using System.Web.WebPages;
 using OutDoor_Models.Requests.User;
 using OutDoor_Services.UtilServices;
+using System.Reflection.Metadata.Ecma335;
 
 namespace OutDoor_Services
 {
     public class UserService : IUserService
     {
         public IUserRepository UserRepository { get; set; }
+        public IPostRepository PostRepository { get; set; }
         public ICryptographyService cryptographyService { get; set; }
 
-        public UserService(IUserRepository userRepository,ICryptographyService cryptographyService)
+        public UserService(IUserRepository userRepository,ICryptographyService cryptographyService, IPostRepository postRepository)
         {
             this.UserRepository = userRepository;
             this.cryptographyService = cryptographyService;
+            this.PostRepository = postRepository;
         }
 
         public async Task<UserModel> CreateUser(CreateUserRequest user)
@@ -55,6 +58,19 @@ namespace OutDoor_Services
 
             return userFounded;
 
+        }
+
+        public async Task<List<PostModel>> GetPosts(string ID)
+        {
+
+            var posts = await PostRepository.getAllPosts();
+
+            return posts == null ? new List<PostModel>() : posts.Where(p => p.UserId == ID).ToList();
+        }
+
+        public async Task<string?> DeleteUserPost(string ID)
+        {
+            return await PostRepository.deletePost(ID);
         }
     }
 }

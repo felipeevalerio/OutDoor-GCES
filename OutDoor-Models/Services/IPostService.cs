@@ -16,5 +16,6 @@ namespace OutDoor_Models.Services
         public Task<IEnumerable<InformationPostResponse>?> getAllPosts();
         public Task<string?> removePostById(string postId);
         public Task<InformationPostResponse?> getPostInfoById(string postId);
+        public Task<PostModel?> EditPost(EditPostModelRequestModel post);
     }
 }

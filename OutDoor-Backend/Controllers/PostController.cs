@@ -21,7 +21,7 @@ namespace OutDoor_Backend.Controllers
 
         [HttpPost]
         [Route("/api/post")]
-        public async Task<InformationPostResponse?> create([FromBody] CreatePostModelRequest request)
+        public async Task<InformationPostResponse?> Create([FromBody] CreatePostModelRequest request)
         {
             return await postService.createPost(request);
 
@@ -29,7 +29,7 @@ namespace OutDoor_Backend.Controllers
 
         [HttpGet]
         [Route("/api/post")]
-        public async Task<IEnumerable<InformationPostResponse>?> get()
+        public async Task<IEnumerable<InformationPostResponse>?> Get()
         {
             return await postService.getAllPosts();
 
@@ -38,9 +38,22 @@ namespace OutDoor_Backend.Controllers
 
         [HttpDelete]
         [Route("/api/post")]
-        public async Task<string?> delete([FromQuery] string postId)
+        public async Task<ActionResult> Delete([FromQuery] string postId)
         {
-            return await postService.removePostById(postId);
+
+            var result =  await postService.removePostById(postId);
+
+            return result == null ? NotFound() : Ok(result);
+
+        }
+
+        [HttpPut]
+        [Route("/api/post")]
+        public async Task<ActionResult> Edit([FromBody] EditPostModelRequestModel post)
+        {
+            var result = await postService.EditPost(post);
+
+            return result == null ? NotFound() : Ok(result);
 
         }
     }

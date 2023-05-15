@@ -34,5 +34,14 @@ namespace OutDoor_Backend.Controllers
 
             return Ok(result);
         }
+
+        [HttpGet]
+        [Route("/api/users/posts")]
+        public async Task<ActionResult> Get([FromQuery] string ID)
+        {
+            var result = await UserService.GetPosts(ID);
+
+            return Ok(result);
+        }
     }
 }
