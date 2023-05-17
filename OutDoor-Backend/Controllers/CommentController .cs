@@ -39,6 +39,8 @@ namespace OutDoor_Backend.Controllers
                     UserEmail = PostInformation.User.Email,
                     UserName = PostInformation.User.Name
                 });
+
+                await PostService.AddNewRating(request.PostId, request.rating);
             }
             catch (Exception ex)
             {

@@ -21,7 +21,7 @@ namespace OutDoor_Models.Responses.Post
         public string State { get; set; }
         public string Description { get; set; }
         public string? Image { get; set; }
-        public int? Rating { get; set; }
+        public double? Rating { get; set; }
         public DateTime CreatedAt { get; set; }
         public IEnumerable<CommentModel>? Comments { get; set; }
 

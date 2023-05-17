@@ -140,8 +140,34 @@ namespace OutDoor_Services
 
         public async Task<PostModel?> EditPost(EditPostModelRequestModel post)
         {
-            return await PostRepository.UpdatePost(post);
+            return await PostRepository.UpdatePost(new PostModel()
+            {
+                Id = post.Id,
+                UserId = post.UserId,
+                CategoryId = post.CategoryId,
+                Title = post.Title,
+                City = post.City,
+                MobileNumber = post.ContactNumber,
+                District = post.District,
+                State = post.State,
+                Description = post.Description,
+                Image = post.Image,
+            });
             
         }
+
+
+        public async Task<PostModel?> AddNewRating(string postID, int rating)
+        {
+            var post = await PostRepository.getPostById(postID);
+
+            post.Rating = ((post.Rating * post.NumberOfRatings) + rating) / (post.NumberOfRatings + 1);
+            post.NumberOfRatings += 1;
+
+            return await PostRepository.UpdatePost(post);
+
+        }
+
+
     }
 }

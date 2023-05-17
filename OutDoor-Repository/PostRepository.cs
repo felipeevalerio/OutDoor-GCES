@@ -94,7 +94,7 @@ namespace OutDoor_Repository
 
         }
 
-        public async Task<PostModel?> UpdatePost(EditPostModelRequestModel Post)
+        public async Task<PostModel?> UpdatePost(PostModel Post)
         {
             try
             {
@@ -107,7 +107,7 @@ namespace OutDoor_Repository
                 post.City= Post.City;
                 post.CategoryId= Post.CategoryId;
                 post.Image = Post.Image;
-                post.MobileNumber = Post.ContactNumber;
+                post.MobileNumber = Post.MobileNumber;
                 await MainContext.SaveChangesAsync();
                 return post;
             }

@@ -14,7 +14,7 @@ namespace OutDoor_Models.Repositorys
         public Task<PostModel> createNewPost(PostModel post);
         public  Task<string?> deletePost(string postId);
         public  Task<PostModel?> getPostById(string postId);
-        public Task<PostModel?> UpdatePost(EditPostModelRequestModel post);
+        public Task<PostModel?> UpdatePost(PostModel post);
 
 
     }

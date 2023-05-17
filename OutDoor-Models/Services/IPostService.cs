@@ -17,5 +17,6 @@ namespace OutDoor_Models.Services
         public Task<string?> removePostById(string postId);
         public Task<InformationPostResponse?> getPostInfoById(string postId);
         public Task<PostModel?> EditPost(EditPostModelRequestModel post);
+        public Task<PostModel?> AddNewRating(string postID, int rating);
     }
 }

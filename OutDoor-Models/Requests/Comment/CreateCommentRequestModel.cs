@@ -12,6 +12,7 @@ namespace OutDoor_Models.Models
         public string Review { get; set; }
         public string UserId { get; set; }
         public string PostId { get; set; }
+        public int rating { get; set; }
 
     }
 }

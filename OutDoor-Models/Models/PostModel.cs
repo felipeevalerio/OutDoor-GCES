@@ -23,7 +23,8 @@ namespace OutDoor_Models.Models
         public string State { get; set; }
         public string Description { get; set; }
         public string? Image { get; set; }
-        public int? Rating { get; set; }
+        public double? Rating { get; set; }
+        public int? NumberOfRatings { get; set; }
         public DateTime CreatedAt { get; set; }
         
     }
