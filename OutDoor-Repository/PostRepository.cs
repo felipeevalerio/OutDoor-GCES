@@ -58,6 +58,7 @@ namespace OutDoor_Repository
         {
             try
             {
+                post.NumberOfRatings = 0;
                 var result = await MainContext.Post.AddAsync(post);
                 await MainContext.SaveChangesAsync();
                 return result.Entity;
