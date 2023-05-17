@@ -37,7 +37,7 @@ namespace OutDoor_Backend.Controllers
 
         [HttpPut]
         [Route("/api/users")]
-        public async Task<ActionResult> Edit([FromQuery] EditUserRequest request)
+        public async Task<ActionResult> Edit([FromBody] EditUserRequest request)
         {
             return Ok(await UserService.EditUserData(request));
         }
