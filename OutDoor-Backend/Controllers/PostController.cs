@@ -35,6 +35,13 @@ namespace OutDoor_Backend.Controllers
 
         }
 
+        [HttpGet]
+        [Route("/api/post/{postId}")]
+        public async Task<InformationPostResponse?> GetPostById([FromRoute(Name = "postId")] string postId)
+        {
+            return await postService.getPostInfoById(postId);
+        }
+
 
         [HttpDelete]
         [Route("/api/post")]
