@@ -100,9 +100,16 @@ namespace OutDoor_Repository
             {
                 var post = await MainContext.Post.FirstOrDefaultAsync(p => p.Id == Post.Id);
                 if (post == null) return null;
-                var result = MainContext.Post.Update(post).Entity;
+                post.Description = Post.Description;
+                post.State = Post.State;
+                post.Title = Post.Title;
+                post.District= Post.District;
+                post.City= Post.City;
+                post.CategoryId= Post.CategoryId;
+                post.Image = Post.Image;
+                post.MobileNumber = Post.ContactNumber;
                 await MainContext.SaveChangesAsync();
-                return result;
+                return post;
             }
             catch (Exception ex)
             {
