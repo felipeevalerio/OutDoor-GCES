@@ -13,6 +13,7 @@ namespace OutDoor_Models.Services
         public Task<UserModel> CreateUser(CreateUserRequest user);
         public Task<UserModel?> LoginUser(LoginRequest user);
         public Task<List<PostModel>> GetPosts(string ID);
+        public Task<UserModel?> EditUserData(EditUserRequest user);
 
     }
 }

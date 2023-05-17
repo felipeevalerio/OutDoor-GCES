@@ -91,9 +91,23 @@ namespace OutDoor_Repository
             }
         }
 
-        public Task<UserModel> UpdateUser(UserModel user)
+        public async Task<UserModel> UpdateUser(UserModel user)
         {
-            throw new NotImplementedException();
+            try
+            {
+                var result = _mainContext.User.Update(user).Entity ;
+                await _mainContext.SaveChangesAsync();
+                return result;
+
+            }
+            catch (Exception ex)
+            {
+                throw new RepositoryException("Um erro inesperado ocorreu ao editar dados de um usuário")
+                {
+                    StatusCode = HttpStatusCode.InternalServerError,
+                    Source = nameof(UserRepository)
+                };
+            }
         }
     }
 }

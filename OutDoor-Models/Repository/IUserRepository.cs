@@ -15,6 +15,7 @@ namespace OutDoor_Models.Repositorys
         public Task<UserModel> CreateUser(UserModel user);
         public Task<UserModel> UpdateUser(UserModel user);
         public Task<UserModel?> GetUserByEmail(string email);
-     
+
+
     }
 }

@@ -60,6 +60,23 @@ namespace OutDoor_Services
 
         }
 
+        public async Task<UserModel?> EditUserData(EditUserRequest user)
+        {
+            var userFounded = await UserRepository.GetById(user.ID);
+            if (userFounded == null) throw new ServiceException("Usuário não pode ser encontrado")
+            {
+                StatusCode = HttpStatusCode.Unauthorized,
+                Source = nameof(UserRepository)
+            };
+            userFounded.Name = user.Name;
+            userFounded.Email = user.Email;
+            userFounded.Avatar = user.Avatar;
+            await UserRepository.UpdateUser(userFounded);
+
+            return userFounded;
+
+        }
+
         public async Task<List<PostModel>> GetPosts(string ID)
         {
 
