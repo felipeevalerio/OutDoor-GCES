@@ -8,8 +8,8 @@ namespace OutDoor_Models.Services
 {
     public interface ICryptographyService
     {
-        public string Encrypt(string strToBeEncripted);
+        //public string Encrypt(string strToBeEncripted);
 
-        public string Decrypt(string cipher);
+        //public string Decrypt(string cipher);
     }
 }

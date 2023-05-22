@@ -44,6 +44,7 @@ builder.Services.AddMvc(options =>
 {
     options.Filters.Add(typeof(ExceptionProcessor));
 });
+
 var app = builder.Build();
 // Configure the HTTP request pipeline.
 
