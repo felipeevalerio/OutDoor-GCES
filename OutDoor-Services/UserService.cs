@@ -42,7 +42,7 @@ namespace OutDoor_Services
         public async Task<UserModel?> LoginUser(LoginRequest user)
         {
             var userFounded = await UserRepository.GetUserByEmail(user.Email);
-            if (userFounded == null) throw new ServiceException("Usuário não pode ser encontrado")
+            if (userFounded == null) throw new ServiceException("Usuário não pode ser encontrado!")
             {
                 StatusCode = HttpStatusCode.Unauthorized,
                 Source = nameof(UserRepository)
