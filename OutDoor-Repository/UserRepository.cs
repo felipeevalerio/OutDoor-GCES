@@ -25,11 +25,6 @@ namespace OutDoor_Repository
         public async Task<UserModel> CreateUser(UserModel user)
         {
 
-            if (await this.GetUserByEmail(user.Email) != null) throw new RepositoryException($"User email: {user.Email} is already in use")
-            {
-                StatusCode = HttpStatusCode.Conflict,
-                Source = nameof(UserRepository)
-            };
             try
             {
                 var result = await _mainContext.AddAsync(user);

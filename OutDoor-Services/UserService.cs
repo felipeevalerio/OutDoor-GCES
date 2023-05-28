@@ -26,6 +26,13 @@ namespace OutDoor_Services
 
         public async Task<UserModel> CreateUser(CreateUserRequest user)
         {
+
+            if (await UserRepository.GetUserByEmail(user.Email) != null) throw new ServiceException($"User email: {user.Email} is already in use")
+            {
+                StatusCode = HttpStatusCode.Conflict,
+                Source = nameof(UserService)
+            };
+
             UserModel userToBeRegistred = new UserModel() {
                 Id = Guid.NewGuid().ToString(),
                 Name = user.Name,
