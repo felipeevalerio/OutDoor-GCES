@@ -12,12 +12,5 @@
         {
         }
 
-        public RepositoryException(string mensagem, Exception innerException) : base(mensagem, innerException)
-        {
-        }
-
-        protected RepositoryException(SerializationInfo info, StreamingContext context) : base(info, context)
-        {
-        }
     }
 }

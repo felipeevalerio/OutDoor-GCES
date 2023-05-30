@@ -11,7 +11,7 @@ namespace OutDoor_Services.UtilServices
 {
     public class RabbitMQService : IRabbitMQService
     {
-        public void SendNotificationToQueue<T>(T message)
+        public bool SendNotificationToQueue<T>(T message)
         {
             var factory = new ConnectionFactory()
             {
@@ -27,6 +27,7 @@ namespace OutDoor_Services.UtilServices
             var json = JsonConvert.SerializeObject(message);
             var body = Encoding.UTF8.GetBytes(json);
             channel.BasicPublish(exchange: "", routingKey: "Notifications", body: body);
+            return connection.IsOpen;
         }
     }
 }

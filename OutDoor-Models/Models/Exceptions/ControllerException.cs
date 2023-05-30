@@ -11,13 +11,5 @@
         public ControllerException(string mensagem) : base(mensagem)
         {
         }
-
-        public ControllerException(string mensagem, Exception innerException) : base(mensagem, innerException)
-        {
-        }
-
-        protected ControllerException(SerializationInfo info, StreamingContext context) : base(info, context)
-        {
-        }
     }
 }

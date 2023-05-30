@@ -17,7 +17,14 @@ namespace OutDoor_Tests
         {
             //Arrange
             Moq.Mock<IUserRepository> userRepositoryMock = new Mock<IUserRepository>();
-            userRepositoryMock.Setup(x => x.CreateUser(It.IsAny<UserModel>()).Result).Returns(new UserModel());
+            userRepositoryMock.Setup(x => x.CreateUser(It.IsAny<UserModel>()).Result).Returns(new UserModel()
+            {
+                Name = "NameTest",
+                Email = "EmailTest@Email.com",
+                Password = "PasswordTest123",
+                UserType = "client",
+                CreatedAt = DateTime.Today
+            });
             Moq.Mock<IPostRepository> postRepositoryMock = new Mock<IPostRepository>();
             var userService = new UserService(userRepositoryMock.Object, new CryptographyService(), postRepositoryMock.Object);
 
@@ -31,6 +38,7 @@ namespace OutDoor_Tests
 
             //Assert
             Assert.NotNull(userCreated);
+            Assert.Equal(DateTime.Today,userCreated.CreatedAt);
         }
 
         [Fact]
@@ -42,8 +50,9 @@ namespace OutDoor_Tests
             Moq.Mock<IPostRepository> postRepositoryMock = new Mock<IPostRepository>();
             var userService = new UserService(userRepositoryMock.Object, new CryptographyService(), postRepositoryMock.Object);
 
+
             //Act then Assert
-            await Assert.ThrowsAsync<ServiceException>( async () =>  await userService.CreateUser(new CreateUserRequest()
+            await Assert.ThrowsAsync <ServiceException>( async () =>  await userService.CreateUser(new CreateUserRequest()
             {
                 Name = "NameTest",
                 Email = "EmailInUse@Email.com",

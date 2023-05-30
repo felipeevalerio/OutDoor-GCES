@@ -8,6 +8,6 @@ namespace OutDoor_Models.Services
 {
     public interface IEmailService
     {
-        public void sendEmail(String email, String subject, String body, bool ishtml = false);
+        public bool sendEmail(String email, String subject, String body, bool ishtml = false);
     }
 }

@@ -6,7 +6,7 @@ using System.Net.Mail;
 public class EmailService : IEmailService
 {
 
-    public void sendEmail(String email, String subject, String body, bool ishtml = false)
+    public bool sendEmail(String email, String subject, String body, bool ishtml = false)
     {
 
         MailMessage mail = new MailMessage();
@@ -23,6 +23,7 @@ public class EmailService : IEmailService
         smtp.EnableSsl = true;
         smtp.Send(mail);
 
+        return smtp.EnableSsl;
 
     }
 }

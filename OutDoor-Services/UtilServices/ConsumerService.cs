@@ -20,11 +20,11 @@ namespace OutDoor_Services.UtilServices
 
     public class ConsumerService : IConsumerService
     {
-        private static string HostName = "jackal-01.rmq.cloudamqp.com";
-        private static string Password = "pwtxZayVOSwMb_MH4S_bRYcmAUrpT8se";
-        private static string VirtualHost = "zupfssnl";
-        private static string UserName = "zupfssnl";
-        private static int Port = 5672;
+        public  string HostName = "jackal-01.rmq.cloudamqp.com";
+        public  string Password = "pwtxZayVOSwMb_MH4S_bRYcmAUrpT8se";
+        public  string VirtualHost = "zupfssnl";
+        public  string UserName = "zupfssnl";
+        public  int Port = 5672;
 
         public IEmailService EmailService;
 
@@ -35,31 +35,22 @@ namespace OutDoor_Services.UtilServices
 
         public IModel createConnection()
         {
-            try
+
+            return ((new ConnectionFactory()
             {
-                return ((new ConnectionFactory()
-                {
-                    HostName = "jackal-01.rmq.cloudamqp.com",
-                    Password = "pwtxZayVOSwMb_MH4S_bRYcmAUrpT8se",
-                    VirtualHost = "zupfssnl",
-                    UserName = "zupfssnl",
-                    Port = 5672,
-                }).CreateConnection().CreateModel());
-            }catch(Exception e)
-            {
-                throw new ServiceException("Erro ao tentar iniciar conecção com serviço RabbitMQ.")
-                {
-                    StatusCode = HttpStatusCode.InternalServerError,
-                    Source = nameof(ConsumerService)
-                };
-            }
+                HostName = "jackal-01.rmq.cloudamqp.com",
+                Password = "pwtxZayVOSwMb_MH4S_bRYcmAUrpT8se",
+                VirtualHost = "zupfssnl",
+                UserName = "zupfssnl",
+                Port = 5672,
+            }).CreateConnection().CreateModel());
+
 
         }
 
         public ConfirmConsumerModel startConsumer()
         {
-            try
-            {
+
                 var conn = createConnection();
                 conn.QueueDeclare("Notifications", exclusive: false, autoDelete: false);
                 var consumer = new EventingBasicConsumer(conn);
@@ -72,24 +63,13 @@ namespace OutDoor_Services.UtilServices
                 };
                 conn.BasicConsume(queue: "Notifications", autoAck: true, consumer: consumer);
 
-                return (conn.ConsumerCount("Notifications") > 0) ? 
-                 new ConfirmConsumerModel() {
+                return new ConfirmConsumerModel() {
                     message = "Consumidor iniciado",
-                    startedAt = DateTime.Now
-                } : new ConfirmConsumerModel()
-                {
-                    message = "Consumidor não iniciado, verficiar manualmente"
+                    startedAt = DateTime.Today
                 };
 
-            }
-            catch (Exception e)
-            {
-                throw new ServiceException("Erro ao tentar declarar consumidor de notificações.")
-                {
-                    StatusCode = HttpStatusCode.InternalServerError,
-                    Source = nameof(ConsumerService)
-                };
-            }
+            
+
         }
     }
 }

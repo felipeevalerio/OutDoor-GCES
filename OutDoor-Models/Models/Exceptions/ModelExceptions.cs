@@ -13,12 +13,5 @@
         {
         }
 
-        public ModelException(string mensagem, Exception innerException) : base(mensagem, innerException)
-        {
-        }
-
-        protected ModelException(SerializationInfo info, StreamingContext context) : base(info, context)
-        {
-        }
     }
 }

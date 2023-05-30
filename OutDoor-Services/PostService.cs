@@ -4,17 +4,12 @@ using OutDoor_Models.Repositorys;
 using OutDoor_Models.Requests.Post;
 using OutDoor_Models.Responses.Post;
 using OutDoor_Models.Services;
-using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.Net;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace OutDoor_Services
 {
     public class PostService : IPostService
-    {   
+    {
         public IPostRepository PostRepository { get; set; }
         public IUserRepository UserRepository { get; set; }
         public ICommentRepository CommentRepository { get; set; }
@@ -70,7 +65,7 @@ namespace OutDoor_Services
                 CreatedAt = createdPost.CreatedAt,
                 Comments = new List<CommentModel>()
             };
-    }
+        }
 
         public async Task<IEnumerable<InformationPostResponse>?> getAllPosts()
         {
@@ -82,13 +77,14 @@ namespace OutDoor_Services
 
             foreach (var post in posts)
             {
-                reponsePosts.Add(new InformationPostResponse() { 
+                reponsePosts.Add(new InformationPostResponse()
+                {
                     Id = post.Id,
                     //Get User by Id
                     User = await UserRepository.GetById(post.UserId),
                     CategoryId = post.CategoryId,
-                    Title= post.Title,
-                    City= post.City,
+                    Title = post.Title,
+                    City = post.City,
                     ContactNumber = post.MobileNumber,
                     District = post.District,
                     State = post.State,
@@ -153,13 +149,15 @@ namespace OutDoor_Services
                 Description = post.Description,
                 Image = post.Image,
             });
-            
+
         }
 
 
         public async Task<PostModel?> AddNewRating(string postID, int rating)
         {
             var post = await PostRepository.getPostById(postID);
+
+            if (post == null) return null;
 
             post.Rating = ((post.Rating * post.NumberOfRatings) + rating) / (post.NumberOfRatings + 1);
             post.NumberOfRatings += 1;

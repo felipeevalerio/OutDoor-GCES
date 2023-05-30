@@ -8,7 +8,7 @@ namespace OutDoor_Models.Services
 {
     public interface IRabbitMQService
     {
-        public void SendNotificationToQueue<T>(T message);
+        public bool SendNotificationToQueue<T>(T message);
     }
 
 }
