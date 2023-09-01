@@ -21,6 +21,7 @@
           "net6.0"
         ],
         "sources": {
+          "C:\\NuggetConfig": {},
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "C:\\Program Files\\dotnet\\sdk\\7.0.302\\Sdks\\Microsoft.NET.Sdk.Web\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
@@ -104,6 +105,7 @@
           "net6.0"
         ],
         "sources": {
+          "C:\\NuggetConfig": {},
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
@@ -169,6 +171,7 @@
           "net6.0"
         ],
         "sources": {
+          "C:\\NuggetConfig": {},
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
@@ -234,6 +237,7 @@
           "net6.0"
         ],
         "sources": {
+          "C:\\NuggetConfig": {},
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
@@ -257,10 +261,6 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "dependencies": {
-            "Microsoft.AspNet.WebPages": {
-              "target": "Package",
-              "version": "[3.2.9, )"
-            },
             "Newtonsoft.Json": {
               "target": "Package",
               "version": "[13.0.3, )"
