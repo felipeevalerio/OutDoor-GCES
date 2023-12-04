@@ -1,6 +1,9 @@
-name: Build container app to Azure Web App - outdoor-api
+name: CI
 
 on:
+  push:
+    branches:
+      - main
   pull_request:
     branches:
       - main
@@ -10,7 +13,6 @@ on:
 jobs:
   build:
     runs-on: 'ubuntu-latest'
-
     steps:
     - uses: actions/checkout@v2
 
