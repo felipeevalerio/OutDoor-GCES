@@ -21,7 +21,7 @@ namespace OutDoor_Backend.Controllers
             var envName = CurrentEnvironment.EnvironmentName;
             var appName = CurrentEnvironment.ApplicationName;
 
-            return " Ok app runing \n EnvName: " + envName + "\n AppName: " + appName;
+            return "Ok app running!! \n EnvName: " + envName + "\n AppName: " + appName;
         }
     }
 }
