@@ -15,18 +15,27 @@ on:
 
 jobs:
   build:
-    runs-on: windows-latest
+    runs-on: ubuntu-latest
 
     steps:
-      - name: Git Checkout
+      - name: 'Checkout GitHub Action'
         uses: actions/checkout@v2
 
-      - name: Build and Publish Docker Image
-        run: |
-          docker build -t outdoor-api .
-          docker tag outdoor-api:latest ${{secrets.DOCKER_HUB_USERNAME}}/outdoor-api:latest
-          echo ${{ secrets.DOCKER_HUB_ACCESS_TOKEN }} | docker login -u ${{secrets.DOCKER_HUB_USERNAME}}
-          docker push ${{secrets.DOCKER_HUB_USERNAME}}/outdoor-api:latest
+      - name: 'Azure authentication'
+        uses: azure/docker-login@v1
+        with:
+          login-server: ${{secrets.AZURE_LOGIN_SERVER}}
+          username: ${{ secrets.REGISTRY_USERNAME }}
+          password: ${{ secrets.REGISTRY_PASSWORD }}
 
-      - name: Unit Tests
-        run: dotnet test
+      - name: Build and push docker image
+        run: |
+          docker build . -t ${{secrets.AZURE_LOGIN_SERVER}}/outdoor-api:${{ github.sha }}
+          docker push ${{secrets.AZURE_LOGIN_SERVER}}/outdoor-api:${{ github.sha }}     
+
+      - name: 'Deploy to Azure Web App'
+        uses: azure/webapps-deploy@v2
+        with:
+          app-name: 'outdoor-api'
+          publish-profile: ${{ secrets.AZURE_WEBAPP_PUBLISH_PROFILE }}
+          images: '${{secrets.AZURE_LOGIN_SERVER}}/outdoor-api:${{ github.sha }}'
