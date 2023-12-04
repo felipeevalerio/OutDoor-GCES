@@ -15,6 +15,7 @@ namespace OutDoor_Backend.Controllers
 
         [HttpGet]
         [Route("/ping")]
+        [ApiExplorerSettings(IgnoreApi = true)]
         public string Ping()
         {
             var envName = CurrentEnvironment.EnvironmentName;
